@@ -3,7 +3,7 @@ import {
   ContainerBuilder, MediaGalleryBuilder, MediaGalleryItemBuilder,
   MessageFlags, SeparatorBuilder, SeparatorSpacingSize, TextDisplayBuilder,
 } from 'discord.js';
-import { assets, theme } from './config.js';
+import { assets, emojis, theme } from './config.js';
 
 /** Flag à passer pour tout message en Components V2. */
 export const V2 = MessageFlags.IsComponentsV2;
@@ -24,7 +24,7 @@ export function buildPanel(key, content, customId) {
     .addMediaGalleryComponents(
       new MediaGalleryBuilder().addItems(new MediaGalleryItemBuilder().setURL(`attachment://${asset.name}`)),
     )
-    .addTextDisplayComponents(text(`## ${content.title}\n${content.description}`))
+    .addTextDisplayComponents(text(`### ${emojis.exc}**__${content.title}__**\n${content.description}`))
     .addSeparatorComponents(divider())
     .addActionRowComponents(
       new ActionRowBuilder().addComponents(

@@ -51,26 +51,43 @@ export const assets = {
   identification: { file: path.join(root, 'assets', 'identification.png'), name: 'identification.png' },
 };
 
+// Emojis personnalisés (le bot doit être sur le serveur qui les héberge).
+// Format : <:nom:ID>  — remplacez les IDs par ceux de votre serveur si besoin.
+export const emojis = {
+  exc: '<:exc:1541213944364924999>',
+  fleche: '<:fleche:1541035911976853535>',
+  engrenage: '<:engrenage:1541036952462032916>',
+};
+
+const { fleche, engrenage } = emojis;
+
+// Style : titre en ###, gras + souligné, citations avec flèche, puces engrenage.
 export const texts = {
   appel17: {
-    title: 'CENTRE D\'OPÉRATIONS ET DE RENSEIGNEMENT',
+    title: ' APPEL 17 — CORG',
     description:
-      'Vous êtes **__témoin ou victime__** d\'un fait nécessitant **__l\'intervention de la Gendarmerie__** ?\n' +
-      'Composez le__ **17** __en cliquant sur le bouton ci-dessous et **__exposez votre situation à l\'opérateur du CORG.__**\n\n' +
-     '-# <:fleche:1541035911976853535> Article 222-16. Les **__appels téléphoniques malveillants réitérés__**, les **__envois réitérés de messages malveillants__** émis par la voie des **__communications électroniques__** ou les **__agressions sonores__** en vue de **__troubler la tranquillité__** d’autrui sont punis d’**__un an d’emprisonnement et de 4 000 euros d’amende__**.',
+      `> ${fleche} Le __**Centre d'Opérations et de Renseignement de la Gendarmerie**__ est joignable en permanence au **__17__**.\n\n` +
+      `${engrenage} Vous êtes **__témoin ou victime__** d'un fait nécessitant l'intervention de la **__Gendarmerie Nationale__** ? ` +
+      `Cliquez sur le bouton ci-dessous et exposez votre situation à l'**__opérateur du CORG__**.\n\n` +
+      `> ${fleche} Tout **__appel abusif ou fantaisiste__** sera sanctionné.`,
+    button: 'Appeler le 17',
+  },
   iggn: {
-    title: 'INSPECTION GÉNÉRALE DE LA GENDARMERIE NATIONALE',
+    title: ' INSPECTION GÉNÉRALE DE LA GENDARMERIE NATIONALE',
     description:
-      'Vous souhaitez signaler le comportement d\'un militaire de la Gendarmerie Nationale ?\n' +
-      'Déposez votre plainte via le bouton ci-dessous. Elle sera transmise à l\'IGGN pour examen.\n\n' +
-      '> Toute dénonciation mensongère pourra faire l\'objet de sanctions.',
+      `> ${fleche} L'**__IGGN__** est chargée de **__contrôler le comportement des militaires__** de la Gendarmerie Nationale.\n\n` +
+      `${engrenage} Vous souhaitez signaler un **__manquement__** ou un **__abus__** ? ` +
+      `Déposez votre plainte via le bouton ci-dessous : elle sera **__transmise à l'IGGN__** pour examen.\n\n` +
+      `> ${fleche} Toute **__dénonciation mensongère__** pourra faire l'objet de sanctions.`,
     button: 'Déposer une plainte',
   },
   identification: {
-    title: 'IDENTIFICATION',
+    title: ' IDENTIFICATION',
     description:
-      'Nouveau militaire ? Enregistrez-vous afin d\'obtenir votre **NIGEND** et votre identité de service.\n' +
-      'Vous devrez renseigner votre **nom et prénom RP**. Votre pseudo sera modifié automatiquement.',
+      `> ${fleche} Tout militaire de la **__Gendarmerie Nationale__** doit s'enregistrer afin d'obtenir son **__NIGEND__**.\n\n` +
+      `${engrenage} Cliquez sur le bouton ci-dessous et renseignez votre **__nom et prénom RP__**. ` +
+      `Votre **__pseudo sera modifié automatiquement__** avec votre identité de service.\n\n` +
+      `> ${fleche} Les informations saisies doivent être **__exactes et cohérentes__**.`,
     button: 'S\'identifier',
   },
 };
