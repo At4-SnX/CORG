@@ -55,11 +55,9 @@ export const texts = {
   appel17: {
     title: 'CENTRE D\'OPÉRATIONS ET DE RENSEIGNEMENT',
     description:
-      'Vous êtes témoin ou victime d\'un fait nécessitant l\'intervention de la Gendarmerie ?\n' +
-      'Composez le **17** en cliquant sur le bouton ci-dessous et exposez votre situation à l\'opérateur du CORG.\n\n' +
-      '> Tout appel abusif ou fantaisiste sera sanctionné.',
-    button: 'Appeler le 17',
-  },
+      'Vous êtes **__témoin ou victime__** d\'un fait nécessitant **__l\'intervention de la Gendarmerie__** ?\n' +
+      'Composez le__ **17** __en cliquant sur le bouton ci-dessous et **__exposez votre situation à l\'opérateur du CORG.__**\n\n' +
+     '-# <:fleche:1541035911976853535> Article 222-16. Les **__appels téléphoniques malveillants réitérés__**, les **__envois réitérés de messages malveillants__** émis par la voie des **__communications électroniques__** ou les **__agressions sonores__** en vue de **__troubler la tranquillité__** d’autrui sont punis d’**__un an d’emprisonnement et de 4 000 euros d’amende__**.',
   iggn: {
     title: 'INSPECTION GÉNÉRALE DE LA GENDARMERIE NATIONALE',
     description:
